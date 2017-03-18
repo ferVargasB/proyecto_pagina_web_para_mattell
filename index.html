@@ -15,7 +15,13 @@
         <div class="container" id="principal">
             <div class="container" id="menuSuperior">
                 <div class="row">
-                    <div class="col-xs-12" style="text-align: left;"><h1>Logo</h1></div>
+                    <div class="col-lg-2" style="text-align: left;" id="divLogo"></div>
+                    <div class="col-lg-5">
+                        
+                    </div>
+                    <div class="col-lg-5">
+                        
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-2">
@@ -34,7 +40,25 @@
                         <h5>Primer Renglon</h5>
                     </div>
                     <div class="col-lg-2">
-                        <h5>Acerca de nosotros</h5>
+                            <script type="text/javascript">
+                                function abrirModal(){
+                                    $("#bienvenida").modal("show");
+                                    $("#contenidoModal").load("/Applications/MAMP/htdocs/proyecto_pagina_web_para_mattell/Archivos_secundarios/llamadaVisionMision.html");
+                                }
+                                function cerraModal(){
+                                    $("#bienvenida").modal("hide");
+                                }           
+                            </script>
+        
+                            <div class="modal fade" id="bienvenida" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                <div class="modal-dialog">
+                                    <div id="contenidoModal" class="modal-content">              
+                                    </div>
+                                </div>
+                            </div>      
+                            <button type="button" class="btn btn-primary" onclick="abrirModal()">
+                                Acerca de nostros
+                            </button>
                     </div>
                 </div>
             </div>

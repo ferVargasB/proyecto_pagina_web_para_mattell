@@ -17,3 +17,8 @@
 }
 #rejillaCentral{
 }
+#divLogo{
+    background-repeat: no-repeat;
+    background-image: url(Imagenes/logoMattell.jpg);
+    height: 210px;
+}
