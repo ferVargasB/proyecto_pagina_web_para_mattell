@@ -10,8 +10,6 @@
     background-color: azure;
     position: relative;
     top: 10px;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
     border: 2px;
     border-radius: 7px;
 }
@@ -21,4 +19,14 @@
     background-repeat: no-repeat;
     background-image: url(Imagenes/logoMattell.jpg);
     height: 210px;
+<<<<<<< Updated upstream
 }
+=======
+    border: 2px;
+    border-radius: 7px;
+}
+.panelesTransparentes{
+    opacity: 0.0;
+    filter: alpha(opacity=10);
+}
+>>>>>>> Stashed changes
