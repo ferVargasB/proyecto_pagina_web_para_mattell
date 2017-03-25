@@ -1,3 +1,4 @@
+
 #principal{
     background-image: url(imagenFondo.jpg);
     width: 100%;
@@ -28,6 +29,7 @@
 .panelesTransparentes{
     opacity: 0.0;
     filter: alpha(opacity=10);
+    font-family:Kristen ITC; 
 }
 >>>>>>> Stashed changes
 ·bienvenida{
