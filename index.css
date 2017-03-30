@@ -22,13 +22,12 @@
     height: 76px;
 <<<<<<< Updated upstream
 }
+#imagenNombreKinderMattell{
+  background-color: black;
+}
 =======
     border: 2px;
     border-radius: 7px;
-}
-.panelesTransparentes{
-    opacity: 0.0;
-    filter: alpha(opacity=10);
 }
 >>>>>>> Stashed changes
 ·bienvenida{
