@@ -33,7 +33,24 @@
                           <button type="button" class="btn btn-link">Nuestras Instalaciones</button>
                     </div>
                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" id="botonMenuSuperior" text-center>
-                        <button type="button" class="btn btn-link">Inicio</button>
+                        <script type="text/javascript">
+                                function abrirModal(){
+                                    $("#Preescolar").modal("show");
+                                $("#contenidoModal1").load("Preescolar.html");
+                                }
+                                function cerraModal(){
+                                    $("#Preescolar").modal("hide");
+                                }
+                            </script>
+
+                            <div class="modal fade" id="Preescolar" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                <div class="modal-dialog">
+                                    <div id="contenidoModal1" class="modal-content">
+                                    </div>
+                                </div>
+                            </div>
+                        <button type="button" class="btn btn-link" onclick="abrirModal()" id="botonMenuSuperior">Preescolar
+                        </button>
                     </div>
                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" id="botonMenuSuperior" text-center>
                             <script type="text/javascript">
@@ -52,7 +69,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary" onclick="abrirModal()" id="botonMenuSuperior">
+                            <button type="button" class="btn btn-link" onclick="abrirModal()" id="botonMenuSuperior">
                                 Nosotros
                             </button>
                     </div>
