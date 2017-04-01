@@ -16,10 +16,12 @@
         <div class="container" id="principal">
             <div class="container" id="menuSuperior">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" id="divLogo" text-center></div>
+                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"text-center>
+                      <div id="divLogo">
+                      </div>
+                    </div>
                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" text-center>
                         <div id="imagenNombreKinderMattell">
-                          
                         </div>
                     </div>
                 </div>
@@ -31,7 +33,24 @@
                           <button type="button" class="btn btn-link">Nuestras Instalaciones</button>
                     </div>
                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" id="botonMenuSuperior" text-center>
-                        <button type="button" class="btn btn-link">Inicio</button>
+                        <script type="text/javascript">
+                                function abrirModal(){
+                                    $("#Preescolar").modal("show");
+                                $("#contenidoModal1").load("Preescolar.html");
+                                }
+                                function cerraModal(){
+                                    $("#Preescolar").modal("hide");
+                                }
+                            </script>
+
+                            <div class="modal fade" id="Preescolar" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                                <div class="modal-dialog">
+                                    <div id="contenidoModal1" class="modal-content">
+                                    </div>
+                                </div>
+                            </div>
+                        <button type="button" class="btn btn-link" onclick="abrirModal()" id="botonMenuSuperior">Preescolar
+                        </button>
                     </div>
                     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" id="botonMenuSuperior" text-center>
                             <script type="text/javascript">
@@ -50,7 +69,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary" onclick="abrirModal()" id="botonMenuSuperior">
+                            <button type="button" class="btn btn-link" onclick="abrirModal()" id="botonMenuSuperior">
                                 Nosotros
                             </button>
                     </div>
@@ -78,6 +97,7 @@
             </div>
              <div class="container" id="rejillaCentral">
                  <div class="row">
+<<<<<<< HEAD
 				 <section class="section-white">
   
 
@@ -122,6 +142,22 @@
 
   
 </section>
+=======
+                   <div class="col-xs-12" id="divCarrusel">
+                   </div>
+                 </div>
+                 <div class="row">
+                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="divInferiorIzq">
+                     <div class="divInterior">
+
+                     </div>
+                   </div>
+                   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="divInferiorDere">
+                     <div class="divInterior">
+                       
+                     </div>
+                   </div>
+>>>>>>> origin/master
                  </div>
              </div>
         </div>
