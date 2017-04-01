@@ -27,9 +27,8 @@
     top: 10px;
     border: 2px;
     border-radius: 7px;
-		background: yellowgreen;
-		box-shadow: 0 0 0 10px #655,
-            0 0 0 15px deeppink, 0 2px 5px 15px rgba(0,0,0,.6);
+		box-shadow: 0 0 0 10px #366DA1,
+            0 0 0 15px red, 0 2px 5px 15px rgba(0,0,0,.6);
 }
 #divCarrusel{
    background-color: black;
@@ -69,11 +68,9 @@
   background-repeat: no-repeat;
   height: 100px;
 }
-=======
     border: 2px;
     border-radius: 7px;
 }
->>>>>>> Stashed changes
 ·bienvenida{
     top 200px;
 }
