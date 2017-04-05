@@ -1,6 +1,6 @@
 
 
-#principal{
+/* #principal{
 	background-image: url(Fondo1.png);
 	width: 100%;
 	height: 100%;
@@ -8,8 +8,8 @@
 	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
-}
-/*.fondo
+} */
+.fondo
 {
 	position:absolute;
 	width:100%;
@@ -19,8 +19,8 @@
 	background-attachment: fixed;
 	background-image: url(Fondo1.png);
 	background-repeat: no-repeat;
-	background-position: center;
-}*/
+	
+}
 #menuSuperior{
     background-color: azure;
     position: relative;
@@ -143,13 +143,93 @@
   }
 #divInferiorIzq{
   top: 40px;
-  background-color: red;
-  height: 200px;
+  background-color: #E9967A;
+  height: 300px;
 }
+#imaizq
+{
+	position:absolute;
+	width:300px;
+	top:10%;
+	left:0;
+	height:270px;
+	
+}
+
+.texto1
+{
+	position:absolute;
+	top:10%;
+	left:65%;
+	width: 150px;
+	height:150px;
+	background-color:1FB2C9;
+	border-radius: 197px 197px 197px 197px;
+-moz-border-radius: 197px 197px 197px 197px;
+-webkit-border-radius: 197px 197px 197px 197px;
+border: 0px none #000000;
+
+	font-family:Lucida Handwriting;
+	font-size:16pt;
+	color: black;
+}
+#letras
+{
+	position:absolute;
+	top:30%;
+	left:5%;
+}
+
+.myButton {
+	-moz-box-shadow: 0px 10px 14px -7px #3e7327;
+	-webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+	background:-moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:-ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352',GradientType=0);
+	background-color:#77b55a;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+	position:absolute;
+	top:80%;
+	left:70%;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
+	background:-moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-o-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:-ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
+	background-color:#72b352;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+
 #divInferiorDere{
   top: 40px;
   background-color: yellow;
-  height: 200px;
+  height: 300px;
 }
 .divInterior{
   margin-top: 5px;
@@ -159,6 +239,8 @@
   border-style: inset;
   border-color: cyan;
 }
+
+
 #rejillaCentral{
 }
 #divLogo{
