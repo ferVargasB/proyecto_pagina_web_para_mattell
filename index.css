@@ -142,9 +142,10 @@
     max-width: 930px;
   }
 #divInferiorIzq{
-  top: 40px;
-  background-color: #E9967A;
+  top: 50px;
+  background-color: 3FBF5F;
   height: 300px;
+  background-image: url(koala.jpg);
 }
 #imaizq
 {
@@ -156,28 +157,32 @@
 	
 }
 
-.texto1
+#texto1
 {
 	position:absolute;
 	top:10%;
 	left:65%;
 	width: 150px;
 	height:150px;
-	background-color:1FB2C9;
+	background-color:1B391F;
 	border-radius: 197px 197px 197px 197px;
 -moz-border-radius: 197px 197px 197px 197px;
 -webkit-border-radius: 197px 197px 197px 197px;
 border: 0px none #000000;
 
-	font-family:Lucida Handwriting;
+	font-family:Matura MT Script Capitals;
 	font-size:16pt;
-	color: black;
+	text-align:center;
+	color: AEA29F;
+	
 }
 #letras
 {
 	position:absolute;
-	top:30%;
+	top:10%;
 	left:5%;
+	
+	
 }
 
 .myButton {
@@ -228,8 +233,8 @@ border: 0px none #000000;
 
 #divInferiorDere{
 	
-  top: 40px;
-  background-color: yellow;
+  top: 50px;
+  background-color: E6370F;
   height: 300px;
   
 }
@@ -259,19 +264,13 @@ border: 0px none #000000;
 	height:150px;
 	
 
-background: #b3dced;
-background: -moz-linear-gradient(left, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, #b3dced), color-stop(50%, #29b8e5), color-stop(100%, #bce0ee));
-background: -webkit-linear-gradient(left, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
-background: -o-linear-gradient(left, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
-background: -ms-linear-gradient(left, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
-background: linear-gradient(to right, #b3dced 0%, #29b8e5 50%, #bce0ee 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 );
+background-color: F25430;
 
 
-	font-family:Tw Cen MT;
+	font-family:Matura MT Script Capitals;
 	font-size:16pt;
-	color: black;
+	color: white;
+	text-align:center;
 }
 #letras2
 {
