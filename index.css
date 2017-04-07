@@ -357,3 +357,6 @@ background-color: F25430;
       font-family: Script;
       font-size: 22px;
  }
+.modal-body{
+	background-img:url(imagenes/fondo_modal_body.jpg);
+	}
