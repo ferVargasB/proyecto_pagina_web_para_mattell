@@ -386,3 +386,44 @@ background-color: F25430;
 	background-image:url(imagenes/fondomodalbody.jpg);
 	background-repeat: no-repeat;
 	}
+#mgfb
+{
+	
+	top:150px;
+	width:100%;
+	height:50px;
+	 background-color: rgba(0,0,0,.2)
+}
+
+
+
+#imafb2
+{
+
+	position:absolute;
+	left:82%;
+	width:170px;
+	height:50px;
+}
+
+#sigfb
+{
+	position:absolute;
+	left:62%;
+	top:50%;
+	font-family:Courier New;
+	font-size:10pt;
+	color:white;
+	
+}
+
+#sigfb1
+{
+	position:absolute;
+	left:20%;
+	top:50%;
+	font-family:Courier New;
+	font-size:10pt;
+	color:white;
+	
+}
