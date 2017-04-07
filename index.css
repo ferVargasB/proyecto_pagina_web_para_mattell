@@ -249,10 +249,7 @@ border: 0px none #000000;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
 	background-color:#72b352;
 }
-.myButton:active {
-	position:relative;
-	top:1px;
-}
+
 
 
 
@@ -343,10 +340,7 @@ background-color: F25430;
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a',GradientType=0);
 	background-color:#72b352;
 }
-.myButton:active {
-	position:relative;
-	top:1px;
-}
+
 .divInterior{
   margin-top: 5px;
   width: auto;
