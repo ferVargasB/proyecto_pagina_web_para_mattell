@@ -354,7 +354,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', end
 }
 .modal-header
  {
-      background-color: b5fb8f;
+      background-color:#FB4D46;
+      color:#5FA778;
       font-family: Script;
       font-size: 22px;
  }
