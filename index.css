@@ -359,4 +359,5 @@ background-color: F25430;
  }
 .modal-body{
 	background-image:url(imagenes/fondobody.jpeg);
+	background-repeat: no-repeat;
 	}
