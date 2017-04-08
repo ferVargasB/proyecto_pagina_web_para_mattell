@@ -34,15 +34,51 @@
 		text-shadow:1px 1px 0 #B8B8B8
 }
 
- #divCarrusel{
+#divCarrusel{
 	 top: 70px;
-	 background-color: black;
-	 height: 100px;
+	 height: 500px;
 	 border: 2px;
 	 border-radius: 7px;
 	 box-shadow: 0 0 0 10px #366DA1,
 					 0 0 0 15px red, 0 2px 5px 15px rgba(0,0,0,.6);
 }
+
+.carousel {
+  height: inherit;;
+  margin-bottom: 0; /* ¿por qué, carousel, por qué? */
+}
+.carousel-inner, .carousel-inner > .item, .carousel-inner > .item > img {
+  height: 100%;
+}
+
+.divInferior{
+	top: 90px;
+	border: 2px;
+	border-radius: 7px;
+	box-shadow: 0 0 0 10px #366DA1,
+					0 0 0 15px red, 0 2px 5px 15px rgba(0,0,0,.6);
+}
+
+#divInferiorIzq{
+	background-color: black;
+	height: 50px;
+}
+#divInferiorDere{
+	background-color: blue;
+	height: 50px;
+}
+
+#imaizq
+{
+	position:absolute;
+	width:300px;
+	top:10%;
+	left:0;
+	height:270px;
+
+}
+
+
 
 #he1
 {
@@ -169,21 +205,6 @@
   .container {
     max-width: 930px;
   }
-#divInferiorIzq{
-  top: 50px;
-  background-color: 3FBF5F;
-  height: 300px;
-  background-image: url(koala.jpg);
-}
-#imaizq
-{
-	position:absolute;
-	width:300px;
-	top:10%;
-	left:0;
-	height:270px;
-
-}
 
 #texto1
 {
@@ -253,22 +274,6 @@ border: 0px none #000000;
 	background-color:#72b352;
 }
 
-
-
-
-#divInferiorDere{
-<<<<<<< Updated upstream
-
-  top: 50px;
-  background-color: E6370F;
-=======
-
-  top: 40px;
-  background-color: yellow;
->>>>>>> Stashed changes
-  height: 300px;
-
-}
 #imader
 {
 	position:absolute;
