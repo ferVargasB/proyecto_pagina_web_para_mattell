@@ -44,16 +44,14 @@
  					0 0 0 15px red, 0 2px 5px 15px rgba(0,0,0,.6);
 }
 
-.filaNoticias{
+#panelNotciasEncabezado{
 	top: 150px;
-	background-color: black;
-	height: 50px;
+	text-align: center;
 }
-#divNoticiaIzq{
-	position: relative;
-	height: 50px;
+.panelNoticiasCuerpo{
+	top: 130px;
+	text-align: center;
 }
-
 .carousel {
   height: inherit;;
   margin-bottom: 0; /* ¿por qué, carousel, por qué? */
