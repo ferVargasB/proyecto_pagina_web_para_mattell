@@ -35,12 +35,12 @@
 }
 
 #divCarrusel{
-	 top: 70px;
-	 height: 500px;
-	 border: 2px;
-	 border-radius: 7px;
-	 box-shadow: 0 0 0 10px #366DA1,
-					 0 0 0 15px red, 0 2px 5px 15px rgba(0,0,0,.6);
+	top: 70px;
+	height: 500px;
+	border: 2px;
+ 	border-radius: 7px;
+ 	box-shadow: 0 0 0 10px #366DA1,
+ 					0 0 0 15px red, 0 2px 5px 15px rgba(0,0,0,.6);
 }
 
 .carousel {
@@ -51,21 +51,23 @@
   height: 100%;
 }
 
-.divInferior{
-	top: 90px;
+#filaNoticias{
+	top: 60%;
+	height: 30px;
+	background-color: black;
 	border: 2px;
-	border-radius: 7px;
-	box-shadow: 0 0 0 10px #366DA1,
-					0 0 0 15px red, 0 2px 5px 15px rgba(0,0,0,.6);
+ 	border-radius: 7px;
+ 	box-shadow: 0 0 0 10px #366DA1,
+				 0 0 0 15px red, 0 2px 5px 15px rgba(0,0,0,.6);
 }
 
-#divInferiorIzq{
-	background-color: black;
-	height: 50px;
+#divNoticias{
 }
-#divInferiorDere{
-	background-color: blue;
-	height: 50px;
+
+.divInferior{
+	position: relative;
+	width: 100%;
+	height: 50%;
 }
 
 #imaizq
