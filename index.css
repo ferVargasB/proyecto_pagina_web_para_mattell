@@ -49,6 +49,10 @@
 	background-color: black;
 	height: 50px;
 }
+#divNoticiaIzq{
+	position: relative;
+	height: 50px;
+}
 
 .carousel {
   height: inherit;;
