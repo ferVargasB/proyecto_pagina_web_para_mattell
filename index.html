@@ -18,11 +18,11 @@
         <div class="container" id="principal">
             <div class="container" id="menuSuperior">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2"text-center>
+                    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"text-center>
                       <div id="divLogo">
                       </div>
                     </div>
-                    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" text-center>
+                    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10" text-center>
                         <div id="imagenNombreKinderMattell">
                         </div>
                     </div>
@@ -30,8 +30,11 @@
                 <div class="row">
                      <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" text-center>
                           <button type="button" class="btn btn-link botonMenuSuperior">Inicio</button>
-                    </div>
-		                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" id="botonMenuSuperior" text-center>
+                     </div>
+		                 <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" id="botonMenuSuperior" text-center>
+                       <button type="button" class="btn btn-link botonMenuSuperior" onclick="abrirModal()" id="botonMenuSuperior">
+                                 Nosotros
+                       </button>
                       <script type="text/javascript">
                                 function abrirModal(){
                                     $("#bienvenida").modal("show");
@@ -43,14 +46,11 @@
                       </script>
                       <div class="modal fade" id="bienvenida" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                         <div class="modal-dialog">
-                          <div id="contenidoModal" class="modal-content">
+                            <div id="contenidoModal" class="modal-content">
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <button type="button" class="btn btn-link" onclick="abrirModal()" id="botonMenuSuperior">
-                                Nosotros
-                      </button>
-                    </div>
                     <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" text-center>
                       <input type="button" class="btn btn-link botonMenuSuperior" value="Nuestras Instalaciones" onclick="abrir()">
                     </div>
@@ -64,7 +64,6 @@
                                     $("#Preescolar").modal("hide");
                                 }
                         </script>
-
                         <div class="modal fade" id="Preescolar" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                           <div class="modal-dialog">
                             <div id="contenidoModal1" class="modal-content">
@@ -93,62 +92,45 @@
                       <button type="button" class="btn btn-link" onclick="abrirModal2()" id="botonMenuSuperior">
                                 Contactanos
                       </button>
-                      <button type="button" class="btn btn-link botonMenuSuperior" onclick="abrirModal()" id="botonMenuSuperior">
-                                Nosotros
-                      </button>
 			               </div>
                 </div>
             </div>
 
-            <div class="container" id="containerCentral">
-              <div class="row">
-                <div class="col-xs-12" id="divCarrusel">
-                  <div id="carrusel" class="carousel slide" data-ride="carousel">
+            <div class="row">
+              <div class="col-xs-12" id="divCarrusel">
+                <div id="carrusel" class="carousel slide" data-ride="carousel">
 
-                    <ol class="carousel-indicators">
-                      <li data-target="#carrusel" data-slide-to="0" class="active"></li>
-                      <li data-target="#carrusel" data-slide-to="1"></li>
-                      <li data-target="#carrusel" data-slide-to="2"></li>
-                    </ol>
+                  <ol class="carousel-indicators">
+                    <li data-target="#carrusel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carrusel" data-slide-to="1"></li>
+                    <li data-target="#carrusel" data-slide-to="2"></li>
+                  </ol>
 
-                    <div class="carousel-inner" role="listbox">
-                      <div class="item active">
-                        <img src="Imagenes/ima1.jpg" class="img-responsive">
-                      </div>
-
-                      <div class="item">
-                        <img src="Imagenes/ima2.jpg" class="img-responsive">
-                      </div>
-
-                      <div class="item">
-                        <img src="Imagenes/ima3.jpg" class="img-responsive">
-                      </div>
-
+                  <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                      <img src="Imagenes/ima1.jpg" class="img-responsive">
                     </div>
 
-                    <a class="left carousel-control" href="#carrusel" role="button" data-slide="prev">
-                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                      <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="right carousel-control" href="#carrusel" role="button" data-slide="next">
-                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                      <span class="sr-only">Siguiente</span>
-                    </a>
+                    <div class="item">
+                      <img src="Imagenes/ima2.jpg" class="img-responsive">
+                    </div>
+                    <div class="item">
+                      <img src="Imagenes/ima3.jpg" class="img-responsive">
+                    </div>
+
                   </div>
+
+                  <a class="left carousel-control" href="#carrusel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                  </a>
+                  <a class="right carousel-control" href="#carrusel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                  </a>
                 </div>
               </div>
-
-              <div class="row">
-
-              </div>
-              <div class="row">
-              </div>
-              <div class="row">
-                <div id="filaNoticias">
-
-                </div>
-              </div>
-             </div>
+            </div>
         </div>
     </body>
 </html>
