@@ -1,0 +1,219 @@
+-- phpMyAdmin SQL Dump
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: localhost:8889
+-- Tiempo de generación: 13-05-2017 a las 18:28:52
+-- Versión del servidor: 5.6.33
+-- Versión de PHP: 7.0.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de datos: `kindermattell`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `alumnos`
+--
+
+CREATE TABLE `alumnos` (
+  `alumno_id` int(11) NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `apellidopaterno` varchar(45) NOT NULL,
+  `apellidomaterno` varchar(45) NOT NULL,
+  `grupo_id` int(11) NOT NULL,
+  `padres_id` int(11) NOT NULL,
+  `curp` varchar(45) NOT NULL,
+  `tipodesangre` varchar(45) NOT NULL,
+  `nss` varchar(45) NOT NULL,
+  `edad` int(11) NOT NULL,
+  `caracteristicasfisicas` varchar(45) NOT NULL,
+  `caracteristicasmedicas` varchar(45) NOT NULL,
+  `fechanacimiento` date NOT NULL,
+  `genero` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `grupos`
+--
+
+CREATE TABLE `grupos` (
+  `grupo_id` int(11) NOT NULL,
+  `salon` varchar(45) NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `maestro_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `maestros`
+--
+
+CREATE TABLE `maestros` (
+  `maestro_id` int(11) NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `apellidopaterno` varchar(45) NOT NULL,
+  `apellidomaterno` varchar(45) NOT NULL,
+  `telefono` varchar(45) NOT NULL,
+  `correo` varchar(45) NOT NULL,
+  `direccion` varchar(45) NOT NULL,
+  `usuario_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `padres`
+--
+
+CREATE TABLE `padres` (
+  `padres_id` int(11) NOT NULL,
+  `nombretutor` varchar(45) NOT NULL,
+  `apellidopaterno` varchar(45) NOT NULL,
+  `apellidomaterno` varchar(45) NOT NULL,
+  `direccion` varchar(45) NOT NULL,
+  `correo` varchar(45) NOT NULL,
+  `usuario_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `roles`
+--
+
+CREATE TABLE `roles` (
+  `rol_id` int(11) NOT NULL,
+  `tipousuario` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `usuario_id` int(11) NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `contrasena` varchar(45) NOT NULL,
+  `rol_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `alumnos`
+--
+ALTER TABLE `alumnos`
+  ADD PRIMARY KEY (`alumno_id`),
+  ADD KEY `grupo_id_idx` (`grupo_id`),
+  ADD KEY `padres_id_idx` (`padres_id`);
+
+--
+-- Indices de la tabla `grupos`
+--
+ALTER TABLE `grupos`
+  ADD PRIMARY KEY (`grupo_id`),
+  ADD KEY `maestro_id_idx` (`maestro_id`);
+
+--
+-- Indices de la tabla `maestros`
+--
+ALTER TABLE `maestros`
+  ADD PRIMARY KEY (`maestro_id`),
+  ADD KEY `usuario_id_idx` (`usuario_id`);
+
+--
+-- Indices de la tabla `padres`
+--
+ALTER TABLE `padres`
+  ADD PRIMARY KEY (`padres_id`),
+  ADD KEY `usuario_id_idx` (`usuario_id`);
+
+--
+-- Indices de la tabla `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`rol_id`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`usuario_id`),
+  ADD KEY `usuario_rol_idx` (`rol_id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `alumnos`
+--
+ALTER TABLE `alumnos`
+  MODIFY `alumno_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `grupos`
+--
+ALTER TABLE `grupos`
+  MODIFY `grupo_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `maestros`
+--
+ALTER TABLE `maestros`
+  MODIFY `maestro_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `padres`
+--
+ALTER TABLE `padres`
+  MODIFY `padres_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `usuario_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `alumnos`
+--
+ALTER TABLE `alumnos`
+  ADD CONSTRAINT `grupo_id` FOREIGN KEY (`grupo_id`) REFERENCES `grupos` (`grupo_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `padres_id` FOREIGN KEY (`padres_id`) REFERENCES `padres` (`padres_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `grupos`
+--
+ALTER TABLE `grupos`
+  ADD CONSTRAINT `maestro_id` FOREIGN KEY (`maestro_id`) REFERENCES `maestros` (`maestro_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `maestros`
+--
+ALTER TABLE `maestros`
+
+  ADD CONSTRAINT `maestro_usuario` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `padres`
+--
+ALTER TABLE `padres`
+  ADD CONSTRAINT `usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `usuario_rol` FOREIGN KEY (`rol_id`) REFERENCES `roles` (`rol_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
