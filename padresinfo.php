@@ -38,10 +38,6 @@ $contrasenia="root";
 				#comprobar si el usuario existe
 				if ($resultadooperacion) {
 
-					$variableNombre = preg_match("/^[a-z]+$/i", $nombre);
-					$variablePaterno = preg_match("/^[a-z]+$/i", $paterno);
-					echo $variableNombre;
-					echo "$variablePaterno";
 
 					#comprobar si los datos son correctos
 					if ( preg_match("/|^[a-zA-Z]+(\s*[a-zA-Z]*)*[a-zA-Z]+$|/", $nombre)  && preg_match("/^[a-z]+$/i", $materno) ){
