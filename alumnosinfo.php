@@ -18,7 +18,7 @@ $usuario="root";
 $contrasenia="root";
 
 	try {
-		
+
 			$conexionMysqli = new mysqli($servidor,$usuario, $contrasenia , $basededatos);
 			echo "2";
 			if ($conexionMysqli-> connect_errno) {
@@ -28,39 +28,40 @@ $contrasenia="root";
 			}
 			else
 			{
-				$query = "insert into alumnos (nombre, apellidopaterno, apellidomaterno, curp, tipodesangre, nss, edad) values ('".$nombre."', '".$paterno."','".$materno."', '".$curp."', '".$tiposangre."', '".$nss."', ".$edad.")";
-				
-				echo $query;
-				
-				$resultadooperacion = $conexionMysqli->query($query);
-				if ($resultadooperacion) {
-					
-					?>
-						<div class = "text-success text-center">
-							<p>Operaci&oacute;n Realizada con &eacute;xito</p>
-						</div>
-						<script type="text/javascript">
-							window.location="datosalumnos2.php";
-						</script>
-					<?php
-					/* header('Status: 301 Moved Permanently', false, 301); */
-					/* header('Location: datospadres.php'); */
-					
-					
-				} 
-				else
-				{
-					?>
-						<div class = "text-success text-center">
-							<p>Operaci&oacute;n <b>NO</b> Realizada </p>
-						</div>
-					<?php
+				if ( preg_match("/^[a-z]+$/i", $nombre) && preg_match("/^[a-z]+$/i", $materno) && filter_var($correo, FILTER_VALIDATE_EMAIL) && preg_match("/^\w+$/", $usuarioo) && preg_match('/(?=[A-Z])/', $pass) ){
+
+					$query = "insert into alumnos (nombre, apellidopaterno, apellidomaterno, curp, tipodesangre, nss, edad) values ('".$nombre."', '".$paterno."','".$materno."', '".$curp."', '".$tiposangre."', '".$nss."', ".$edad.")";
+
+					echo $query;
+
+					$resultadooperacion = $conexionMysqli->query($query);
+					if ($resultadooperacion) {
+						?>
+							<div class = "text-success text-center">
+								<p>Operaci&oacute;n Realizada con &eacute;xito</p>
+							</div>
+							<script type="text/javascript">
+								window.location="datosalumnos2.php";
+							</script>
+						<?php
+						/* header('Status: 301 Moved Permanently', false, 301); */
+						/* header('Location: datospadres.php'); */
+					}
+					else
+					{
+						?>
+							<div class = "text-success text-center">
+								<p>Operaci&oacute;n <b>NO</b> Realizada </p>
+							</div>
+						<?php
+					}
+
+				} else {
+					echo "Campos incorrectos";
 				}
 			}
-		}	 
-		catch (Exception $e) 
+		}
+		catch (Exception $e)
 		{
 			echo $e;
 		}
-		
-		
