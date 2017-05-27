@@ -49,7 +49,7 @@ function validarCampos($nombreP, $paternoP, $maternoP, $correoP, $direccionP, $u
 				$resultadooperacion = $conexionMysqli->query($query);
 				echo "Funcionó los primis :v";
 
-				if ( validarCampos) {
+				if ( validarCampos($nombre, $paterno, $materno, $correo, $direccion, $usuarioo, $pass) ) {
 					#si los datos estan correctos, entonces, se hace el query
 					if ($resultadooperacion) {
 						#si el query es correcto, se insertan los datos
@@ -83,7 +83,7 @@ function validarCampos($nombreP, $paternoP, $maternoP, $correoP, $direccionP, $u
 							</div>
 						<?php
 					}
-					
+
 				} else {
 					# campos erroneos
 					<div class = "text-success text-center">
