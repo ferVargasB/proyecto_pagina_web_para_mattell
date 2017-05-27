@@ -35,11 +35,9 @@ $contrasenia="root";
 
 				#comprobar si el usuario existe
 				if ($resultadooperacion) {
-
-					echo $paterno;
-
+					
 					#comprobar si los datos son correctos
-					if ( preg_match("/|^[a-zA-Z]+(\s*[a-zA-Z]*)*[a-zA-Z]+$|/", $nombre) && preg_match("/|^[a-zA-Z]+(\s*[a-zA-Z]*)*[a-zA-Z]+$|/i", $materno) && filter_var($correo, FILTER_VALIDATE_EMAIL) && preg_match("/^\w+$/", $usuarioo) && preg_match('/(?=[A-Z])/', $pass) ){
+					if ( preg_match("/|^[a-zA-Z]+(\s*[a-zA-Z]*)*[a-zA-Z]+$|/", $nombre)  && preg_match("/^[a-z]+$/i", $materno) ){
 
 						$query = "insert into padres
 						(nombretutor,apellidopaterno, apellidomaterno, correo, direccion, usuario_id) values (
