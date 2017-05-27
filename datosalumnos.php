@@ -40,7 +40,7 @@
 			</div>
 
 			<div class="col-md-12 col-xs-12 text-left">
- 			<input id ="txtedad" type="number" max=99 min=1 step=1 maxlenght="2" , placeholder ="Edad">
+ 			<input id ="txtedad" type="text" maxlenght="2" , placeholder ="Edad">
 			</div>
 
 			</div>

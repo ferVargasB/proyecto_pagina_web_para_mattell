@@ -28,9 +28,9 @@ $contrasenia="root";
 			}
 			else
 			{
-				if ( preg_match("/^[a-z]+$/i", $nombre) && preg_match("/^[a-z]+$/i", $materno) && filter_var($correo, FILTER_VALIDATE_EMAIL) && preg_match("/^\w+$/", $usuarioo) && preg_match('/(?=[A-Z])/', $pass) ){
+				if ( preg_match("/^[a-z]+$/i", $nombre) && preg_match("/^[a-z]+$/i", $materno) && preg_match("/^[A-Z\d]{18}$/", $curp) && preg_match('/([A|B|AB|O]+) ([positivo|negativo]+)/', $tiposangre) && preg_match('/^\d{11}$/', $nss) ){
 
-					$query = "insert into alumnos (nombre, apellidopaterno, apellidomaterno, curp, tipodesangre, nss, edad) values ('".$nombre."', '".$paterno."','".$materno."', '".$curp."', '".$tiposangre."', '".$nss."', ".$edad.")";
+					$query = "insert into alumnos (nombre, apellidopaterno, apellidomaterno, curp, tipodesangre, nss, edad) value ('".$nombre."', '".$paterno."','".$materno."', '".$curp."', '".$tiposangre."', '".$nss."', ".$edad.")";
 
 					echo $query;
 
