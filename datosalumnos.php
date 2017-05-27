@@ -9,46 +9,46 @@
         <link rel="stylesheet"
               href="datosalumnos.css"
               type="text/css">
-	  
+
     </head>
     <body class = "fondo" background="Fondo1.png">
 		<div class="row">
-		
+
 			<h1 class = "text-center">Datos del Alumno </h1>
 			<div class="col-md-12 col-xs-12 text-left">
- 			<input id ="txtnombre" type="text" maxlenght="25" , placeholder="Nombre...", > 
+ 			<input id ="txtnombre" type="text" maxlenght="25" , placeholder="Nombre...", >
 			</div>
-			
+
 			<div class="col-md-12 col-xs-12 text-left">
- 			<input id ="txtpaterno" type="text" maxlenght="25", placeholder="Apellido Paterno"> 
+ 			<input id ="txtpaterno" type="text" maxlenght="25", placeholder="Apellido Paterno">
 			</div>
-			
+
 			<div class="col-md-12 col-xs-12 text-left">
- 			<input id ="txtmaterno" type="text" maxlenght="25" , placeholder ="Apellido Materno"> 
+ 			<input id ="txtmaterno" type="text" maxlenght="25" , placeholder ="Apellido Materno">
 			</div>
-			
+
 			<div class="col-md-12 col-xs-12 text-left">
- 			<input id ="txtcurp" type="text" maxlenght="25" , placeholder ="CURP"> 
+ 			<input id ="txtcurp" type="text" maxlenght="25" , placeholder ="CURP">
 			</div>
-			
+
 			<div class="col-md-12 col-xs-12 text-left">
- 			<input id ="txttiposangre" type="text" maxlenght="25" , placeholder ="Tipo de sangre"> 
+ 			<input id ="txttiposangre" type="text" maxlenght="25" , placeholder ="Tipo de sangre">
 			</div>
-			
+
 			<div class="col-md-12 col-xs-12 text-left">
- 			<input id ="txtnss" type="text" maxlenght="25" , placeholder ="NSS"> 
+ 			<input id ="txtnss" type="text" maxlenght="25" , placeholder ="NSS">
 			</div>
-			
+
 			<div class="col-md-12 col-xs-12 text-left">
- 			<input id ="txtedad" type="text" maxlenght="25" , placeholder ="Edad"> 
+ 			<input id ="txtedad" type="text" maxlenght="2" , placeholder ="Edad">
 			</div>
-			
+
 			</div>
 			<button id="btnDatosSiguiente" class="btn btn-success btn-lg"
-			onclick="Alumnos()">	
+			onclick="Alumnos()">
 			<span class="fa fa-save"></span>
 				Siguiente</button>
-				
+
 		<div id="respuesta" class="row">
 		</div>
 		</div>

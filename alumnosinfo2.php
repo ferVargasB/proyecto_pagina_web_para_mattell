@@ -8,7 +8,6 @@ $fecha = $_POST["fecha"];
 $genero = $_POST["genero"];
 $grupo = $_POST["grupo"];
 
-echo "xxxxx";
 //variables del servidor
 $servidor="localhost";
 $basededatos="kindermattell";
@@ -16,9 +15,8 @@ $usuario="root";
 $contrasenia="root";
 
 	try {
-		
+
 			$conexionMysqli = new mysqli($servidor,$usuario, $contrasenia , $basededatos);
-			echo "2";
 			if ($conexionMysqli-> connect_errno) {
 				echo "Fallo la conexión con MYSQL:
 				(" . $conexionMysqli -> connect_errno . ")
@@ -26,38 +24,42 @@ $contrasenia="root";
 			}
 			else
 			{
-				
-				$query = "update alumnos set caracteristicasfisicas='".$fisicas."', caracteristicasmedicas='".$medicas."', fechanacimiento='".$fecha."', genero='".$genero."', grupo_id=".$grupo." where alumno_id = (select MAX(alumno_id) from alumnos";
-				
-				echo $query;
-				
-				$resultadooperacion = $conexionMysqli->query($query);
-				if ($resultadooperacion) {
-					
-					?>
-						<div class = "text-success text-center">
-							<p>Operaci&oacute;n Realizada con &eacute;xito</p>
-						</div>
-						 <script type="text/javascript">
-							window.location="gracias.html";
-						</script> 
-					<?php
-					/* header('Status: 301 Moved Permanently', false, 301); */
-					/* header('Location: datospadres.php'); */
-					
-					
-				} 
-				else
-				{
-					?>
-						<div class = "text-success text-center">
-							<p>Operaci&oacute;n <b>NO</b> Realizada </p>
-						</div>
-					<?php
+
+				if ( preg_match("/[a-z]+$/i", $fisicas) &&  preg_match("/[a-z]+$/i", $medicas) &&
+			 	preg_match("/^[0-9]{4}-([0][1-9]|[1][0-2])-([0][1-9]|[1-2][0-9]|[3][0-1])$/", $fecha)){
+
+					$query = ("call actualizarDatosAlumnos('".$fisicas."','".$medicas."', ".$grupo.",'".$fecha."','".$genero."')");
+					echo $query;
+					$resultado = $conexionMysqli->query($query);
+
+					if ($resultado) {
+						?>
+							<div class = "text-success text-center">
+								<p>Operaci&oacute;n Realizada con &eacute;xito</p>
+							</div>
+							 <script type="text/javascript">
+								window.location="gracias.html";
+							</script>
+						<?php
+						/* header('Status: 301 Moved Permanently', false, 301); */
+						/* header('Location: datospadres.php'); */
+					}
+					else
+					{
+						?>
+							<div class = "text-success text-center">
+								<p>Operaci&oacute;n <b>NO</b> Realizada </p>
+							</div>
+						<?php
+					}
+
+				} else {
+					echo "Datos incorrectos, verifique";
 				}
+
 			}
-		}	 
-		catch (Exception $e) 
+		}
+		catch (Exception $e)
 		{
 			echo $e;
 		}
